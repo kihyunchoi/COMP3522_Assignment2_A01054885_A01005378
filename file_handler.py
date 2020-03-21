@@ -16,10 +16,8 @@ class FileHandler:
             with open(file_name, mode='r', encoding='utf-8') as loading:
                 data = loading.read()
                 print(data)
-            return data
         else:
             raise FileNotFoundError(f"File not exists : {file_name}")
-            return
 
     @staticmethod
     def write_lines(file_name, lines):

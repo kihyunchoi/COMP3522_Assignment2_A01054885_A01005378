@@ -33,10 +33,13 @@ class Store:
         report_date = now.strftime("%d%m%Y")
         report_time = now.strftime("%H%M")
         file_name = "DTR_" + report_date + "_" + report_time + ".txt"
-        print(file_name)
-        # file_handler = FileHandler.write_lines(file_name, lines)
-        print("\nHOLIDAY STORE - DAILY TRANSACTION REPORT (DTR)")
-        print(now.strftime("%d-%m-%Y %H:%M"))
+        lines = ["HOLIDAY STORE - DAILY TRANSACTION REPORT (DTR)", now.strftime("%d-%m-%Y %H:%M")]
+        # print(file_name)
+        # FileHandler.write_lines(file_name, lines)
+        # FileHandler.load_data(file_name)
+        FileHandler.load_data("DTR_21032020_0635.txt")
+        # print("\nHOLIDAY STORE - DAILY TRANSACTION REPORT (DTR)")
+        # print(now.strftime("%d-%m-%Y %H:%M"))
 
 
 class Menu:
