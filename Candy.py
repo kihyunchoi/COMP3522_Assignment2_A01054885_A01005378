@@ -30,6 +30,13 @@ class PumpkinCaramelToffee(Candy):
                          kwargs["has_nuts"], kwargs["has_lactose"])
         self.variety = kwargs["variety"]
 
+    # def __str__(self):
+    #     return f"Name : {self.name}\n" \
+    #            f"Product id : {self.product_id}\n" \
+    #            f"Has nuts : {self.has_nuts}\n" \
+    #            f"Has lactose : {self.has_lactose}\n" \
+    #            f"Variety : {self.variety}\n"
+
 
 class CandyCanes(Candy):
     """
@@ -41,6 +48,13 @@ class CandyCanes(Candy):
                          kwargs["has_nuts"], kwargs["has_lactose"])
         self.colour = kwargs["colour"]
 
+    # def __str__(self):
+    #     return f"Name : {self.name}\n" \
+    #            f"Product id : {self.product_id}\n" \
+    #            f"Has nuts : {self.has_nuts}\n" \
+    #            f"Has lactose : {self.has_lactose}\n" \
+    #            f"Colour : {self.colour}\n"
+
 
 class CremeEggs(Candy):
     """
@@ -51,3 +65,10 @@ class CremeEggs(Candy):
         super().__init__(kwargs["name"], kwargs["description"], kwargs["product_id"],
                          kwargs["has_nuts"], kwargs["has_lactose"])
         self.pack_size = kwargs["pack_size"]
+
+    # def __str__(self):
+    #     return f"Name : {self.name}\n" \
+    #            f"Product id : {self.product_id}\n" \
+    #            f"Has nuts : {self.has_nuts}\n" \
+    #            f"Has lactose : {self.has_lactose}\n" \
+    #            f"Pack size : {self.pack_size}\n"

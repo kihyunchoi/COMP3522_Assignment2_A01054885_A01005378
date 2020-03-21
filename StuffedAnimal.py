@@ -32,6 +32,14 @@ class DancingSkeleton(StuffedAnimal):
                          kwargs["size"], kwargs["fabric"])
         self.has_glow = kwargs["has_glow"]
 
+    # def __str__(self):
+    #     return f"Name : {self.name}\n" \
+    #            f"Product id : {self.product_id}\n" \
+    #            f"Stuffing : {self.stuffing}\n" \
+    #            f"Size : {self.size}\n" \
+    #            f"Fabric : {self.fabric}\n" \
+    #            f"Has glow : {self.has_glow}\n"
+
 
 class Reindeer(StuffedAnimal):
     """
@@ -43,6 +51,14 @@ class Reindeer(StuffedAnimal):
                          kwargs["size"], kwargs["fabric"])
         self.has_glow = kwargs["has_glow"]
 
+    # def __str__(self):
+    #     return f"Name : {self.name}\n" \
+    #            f"Product id : {self.product_id}\n" \
+    #            f"Stuffing : {self.stuffing}\n" \
+    #            f"Size : {self.size}\n" \
+    #            f"Fabric : {self.fabric}\n" \
+    #            f"Has glow : {self.has_glow}\n"
+
 
 class EasterBunny(StuffedAnimal):
     """
@@ -53,3 +69,11 @@ class EasterBunny(StuffedAnimal):
         super().__init__(kwargs["name"], kwargs["description"], kwargs["product_id"], kwargs["stuffing"],
                          kwargs["size"], kwargs["fabric"])
         self.colour = kwargs["colour"]
+
+    # def __str__(self):
+    #     return f"Name : {self.name}\n" \
+    #            f"Product id : {self.product_id}\n" \
+    #            f"Stuffing : {self.stuffing}\n" \
+    #            f"Size : {self.size}\n" \
+    #            f"Fabric : {self.fabric}\n" \
+    #            f"Colour : {self.colour}\n"

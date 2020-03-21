@@ -31,6 +31,14 @@ class SantasWorkshop(Toy):
         self.dimensions = kwargs["dimensions"]
         self.num_rooms = kwargs["num_rooms"]
 
+    # def __str__(self):
+    #     return f"Name : {self.name}\n" \
+    #            f"Product id : {self.product_id}\n" \
+    #            f"Has batteries : {self.has_batteries}\n" \
+    #            f"Min age : {self.min_age}\n" \
+    #            f"Dimensions : {self.dimensions}\n" \
+    #            f"Number of Rooms : {self.num_rooms}\n"
+
 
 class RCSpider(Toy):
     """
@@ -45,6 +53,16 @@ class RCSpider(Toy):
         self.has_glow = kwargs["has_glow"]
         self.spider_type = kwargs["spider_type"]
 
+    # def __str__(self):
+    #     return f"Name : {self.name}\n" \
+    #            f"Product id : {self.product_id}\n" \
+    #            f"Has batteries : {self.has_batteries}\n" \
+    #            f"Min age : {self.min_age}\n" \
+    #            f"Speed : {self.speed}\n" \
+    #            f"Jump height : {self.jump_height}\n" \
+    #            f"Has glow : {self.has_glow}\n" \
+    #            f"Spider type : {self.spider_type}\n"
+
 
 class RobotBunny(Toy):
     """
@@ -56,3 +74,11 @@ class RobotBunny(Toy):
                          kwargs["description"], kwargs["product_id"])
         self.num_sound = kwargs["num_sound"]
         self.colour = kwargs["colour"]
+
+    # def __str__(self):
+    #     return f"Name : {self.name}\n" \
+    #            f"Product id : {self.product_id}\n" \
+    #            f"Has batteries : {self.has_batteries}\n" \
+    #            f"Min age : {self.min_age}\n" \
+    #            f"Num sound : {self.num_sound}\n" \
+    #            f"Colour : {self.colour}\n"
