@@ -6,7 +6,7 @@ class Toy(ShopItem):
     Abstract class for Toys
     """
 
-    def __init__(self, has_batteries: bool, min_age, name, description, product_id):
+    def __init__(self, has_batteries, min_age, name, description, product_id):
         """
         Construct a toy.
         :param has_batteries: Boolean
@@ -25,8 +25,9 @@ class SantasWorkshop(Toy):
     Create a SantasWorkshop toy.
     """
 
-    def __init__(self, min_age, name, description, product_id, **kwargs):
-        super().__init__(False, min_age, name, description, product_id)
+    def __init__(self, **kwargs):
+        super().__init__(kwargs["has_batteries"], kwargs["min_age"], kwargs["name"],
+                         kwargs["description"], kwargs["product_id"])
         self.dimensions = kwargs["dimensions"]
         self.num_rooms = kwargs["num_rooms"]
 
@@ -36,8 +37,9 @@ class RCSpider(Toy):
     Create an RC Spider toy.
     """
 
-    def __init__(self, min_age, name, description, product_id, **kwargs):
-        super().__init__(True, min_age, name, description, product_id)
+    def __init__(self, **kwargs):
+        super().__init__(kwargs["has_batteries"], kwargs["min_age"], kwargs["name"],
+                         kwargs["description"], kwargs["product_id"])
         self.speed = kwargs["speed"]
         self.jump_height = kwargs["jump_height"]
         self.has_glow = kwargs["has_glow"]
@@ -49,7 +51,8 @@ class RobotBunny(Toy):
     Create a Robot Bunny toy.
     """
 
-    def __init__(self, min_age, name, description, product_id, **kwargs):
-        super().__init__(True, min_age, name, description, product_id)
+    def __init__(self, **kwargs):
+        super().__init__(kwargs["has_batteries"], kwargs["min_age"], kwargs["name"],
+                         kwargs["description"], kwargs["product_id"])
         self.num_sound = kwargs["num_sound"]
         self.colour = kwargs["colour"]
