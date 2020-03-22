@@ -1,0 +1,7 @@
+HOLIDAY STORE - DAILY TRANSACTION REPORT (DTR)
+21-03-2020 06:35
+
+Order 102, Item StuffedAnimal, Product ID H9405S, Name "Skelly the Tap Dancer", Quantity 3
+Order 103, Item Toy, Product ID T2134C, Name "Santas Workshop Deluxe Edition", Quanity 20
+Order 104, Item Toy, Product ID T3243H, Name "Terrifying Tarantula", Quantity 17
+Order 105, Could not process order data was corrupted, InvalidDataError - Stuffing can only by "Polyester Fiberfill" or "Wool"
