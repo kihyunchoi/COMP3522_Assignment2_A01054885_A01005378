@@ -19,15 +19,17 @@ class Candy(ShopItem):
         self.has_nuts = has_nuts
         self.has_lactose = has_lactose
 
+    def __hash__(self):
+        return hash((self.name, self.product_id, self.description, self.has_nuts, self.has_lactose))
+
 
 class PumpkinCaramelToffee(Candy):
     """
     Create a Pumpkin Caramel Toffee item.
     """
 
-    def __init__(self, **kwargs):
-        super().__init__(kwargs["name"], kwargs["description"], kwargs["product_id"],
-                         kwargs["has_nuts"], kwargs["has_lactose"])
+    def __init__(self, name, product_id, **kwargs):
+        super().__init__(name, kwargs["description"], product_id, kwargs["has_nuts"], kwargs["has_lactose"])
         self.variety = kwargs["variety"]
 
     # def __str__(self):
@@ -43,9 +45,8 @@ class CandyCanes(Candy):
     Create Candy Cane item.
     """
 
-    def __init__(self, **kwargs):
-        super().__init__(kwargs["name"], kwargs["description"], kwargs["product_id"],
-                         kwargs["has_nuts"], kwargs["has_lactose"])
+    def __init__(self, name, product_id, **kwargs):
+        super().__init__(name, kwargs["description"], product_id, kwargs["has_nuts"], kwargs["has_lactose"])
         self.colour = kwargs["colour"]
 
     # def __str__(self):
@@ -61,9 +62,8 @@ class CremeEggs(Candy):
     Create Creme Eggs.
     """
 
-    def __init__(self, **kwargs):
-        super().__init__(kwargs["name"], kwargs["description"], kwargs["product_id"],
-                         kwargs["has_nuts"], kwargs["has_lactose"])
+    def __init__(self, name, product_id, **kwargs):
+        super().__init__(name, kwargs["description"], product_id, kwargs["has_nuts"], kwargs["has_lactose"])
         self.pack_size = kwargs["pack_size"]
 
     # def __str__(self):

@@ -10,3 +10,7 @@ class ShopItem(abc.ABC):
         self.name = name
         self.description = description
         self.product_id = product_id
+
+    @abc.abstractmethod
+    def __hash__(self):
+        pass

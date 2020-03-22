@@ -21,14 +21,17 @@ class StuffedAnimal(ShopItem):
         self.size = size
         self.fabric = fabric
 
+    def __hash__(self):
+        return hash((self.name, self.product_id, self.description, self.stuffing, self.size, self.fabric))
+
 
 class DancingSkeleton(StuffedAnimal):
     """
     Create a Dancing Skeleton.
     """
 
-    def __init__(self, **kwargs):
-        super().__init__(kwargs["name"], kwargs["description"], kwargs["product_id"], kwargs["stuffing"],
+    def __init__(self, name, product_id, **kwargs):
+        super().__init__(name, kwargs["description"], product_id, kwargs["stuffing"],
                          kwargs["size"], kwargs["fabric"])
         self.has_glow = kwargs["has_glow"]
 
@@ -46,8 +49,8 @@ class Reindeer(StuffedAnimal):
     Create a Reindeer.
     """
 
-    def __init__(self, **kwargs):
-        super().__init__(kwargs["name"], kwargs["description"], kwargs["product_id"], kwargs["stuffing"],
+    def __init__(self, name, product_id, **kwargs):
+        super().__init__(name, kwargs["description"], product_id, kwargs["stuffing"],
                          kwargs["size"], kwargs["fabric"])
         self.has_glow = kwargs["has_glow"]
 
@@ -65,8 +68,8 @@ class EasterBunny(StuffedAnimal):
     Create an Easter Bunny.
     """
 
-    def __init__(self, **kwargs):
-        super().__init__(kwargs["name"], kwargs["description"], kwargs["product_id"], kwargs["stuffing"],
+    def __init__(self, name, product_id, **kwargs):
+        super().__init__(name, kwargs["description"], product_id, kwargs["stuffing"],
                          kwargs["size"], kwargs["fabric"])
         self.colour = kwargs["colour"]
 

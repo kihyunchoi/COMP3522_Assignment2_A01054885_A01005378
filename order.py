@@ -1,12 +1,15 @@
 class Order:
-    def __init__(self, order_number, product_id, item, name, quantity, product_details):
+    """
+    Create an order for the shop.
+    """
+    def __init__(self, order_number, product_id, item, name, quantity, product_details, factory):
         self._order_number = order_number
         self._product_id = product_id
         self._item = item
         self._name = name
         self._quantity = quantity
         self._product_details = product_details
-        # self._factory = factory
+        self._factory = factory
 
     @property
     def order_number(self):
@@ -32,9 +35,9 @@ class Order:
     def product_details(self):
         return self._product_details
 
-    # @property
-    # def factory(self):
-    #     return self._factory
+    @property
+    def factory(self):
+        return self._factory
 
     def __str__(self):
         return f"Order number : {self.order_number}\n" \
